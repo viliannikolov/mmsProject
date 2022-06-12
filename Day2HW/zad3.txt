@@ -1,0 +1,8 @@
+
+// LINUX COMMANDS TO FIND MAX AND MIN FROM A FILE OF REAL NUMBERS
+// working with numbers from file numbers3.txt
+
+sort -n numbers3.txt | head -1    =>   sorting the numbers in (ascending order by default) and PIPING to head -1 which grabs the first line only, which is the smallest number 
+
+sort -nr numbers3.txt | head -1   =>   same as the previous command, but the -r is reversing the default order(ascending order) of the sort func,
+so it sorts the numbers in (descending order) and grabs the highest number

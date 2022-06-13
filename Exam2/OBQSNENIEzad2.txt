@@ -1,0 +1,15 @@
+Program is first written in a text editor (vi, vim, emacs etc).
+Program is compiled in order to be translated into machine (object) code.
+Often the program we wrote needs to use other programs or library of programs in order to be executed. That is when “linking” is taking place. 
+“Linking” connects all needed programs and functions in order to execute the program you wrote. There are two ways to make linking happen: 1) Static linking and 2) Dynamic linking.
+When linking can be performed: a) compilation time — when code is translated into machine code, b) load time — when program is loaded into memory, c) run time.
+ Linking is the last step before making the file with your program executable.
+
+    Linking time
+Static: happens as the last step of the compilation process. After the program is placed in the memory.
+Dynamic: shared libraries are added during linking process when executable file and libraries are added to the memory.
+
+ Static - is to be performed by the Linker!
+ Dynamic - is to be performed by OS
+
+ The separate files made by preprocessor, compiler,assembler and linker weren't successfully made because of an error in the code in car.c

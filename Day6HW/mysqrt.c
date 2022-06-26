@@ -1,27 +1,20 @@
 #include <stdio.h>
- double root(double n)
- {
-    float temp, sqrt; 
-         sqrt = n/2;
-         temp = 0;
-         while(sqrt != temp)
-            {
-               temp = sqrt;
-               sqrt = (n/temp + temp) / 2;
-            }
-         return sqrt;    
- }
+#include <stdint.h>
 
+double simple_sqrt(double num)
+{
+uint8_t i = 10;
+double x = num /2;
+while (i-- && num)
+{
+x = ((num /x) + x) /2 ;
+}
+return x;
+}
 
 int main()
  {
-  int number = 0;
-     printf("Enter number: \n");
-     scanf("%d",&number);
-     if(number < 0)
-         {printf("THE SQRT OF (%d) IS = %fi\n", number, root(number));}
-     else if(number > 0)
-         {printf("THE SQRT OF (%d) IS = %f \n", number, root(number));}
-
-    return 0;
+   double num = 3;
+   printf("sqrt(%lf) = %lf\n",num,simple_sqrt(num));
+   return 0;
  }
